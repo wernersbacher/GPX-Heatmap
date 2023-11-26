@@ -30,15 +30,17 @@ from argparse import ArgumentParser, Namespace
 from utils import deg2xy, xy2deg, gaussian_filter, download_tile, read_data_from_gpx
 
 # globals
-HEATMAP_MAX_SIZE = (2160, 3840)  # maximum heatmap size in pixel
+HEATMAP_MAX_WIDTH = 4000
+HEATMAP_MAX_HEIGHT = 4000
+HEATMAP_MAX_SIZE = (HEATMAP_MAX_WIDTH, HEATMAP_MAX_HEIGHT)  # maximum heatmap size in pixel
 HEATMAP_MARGIN_SIZE = 32  # margin around heatmap trackpoints in pixel
 
 PLT_COLORMAP = 'hot'  # matplotlib color map
 
 OSM_TILE_SERVER = 'https://tile.openstreetmap.org/{}/{}/{}.png'
 OSM_TILE_SIZE = 256  # OSM tile size in pixel
-OSM_MAX_ZOOM = 19  # OSM maximum zoom level
-OSM_MAX_TILE_COUNT = 100  # maximum number of tiles to download
+OSM_MAX_ZOOM = 18  # OSM maximum zoom level
+OSM_MAX_TILE_COUNT = 500  # maximum number of tiles to download
 
 
 def main(args: Namespace) -> None:

@@ -56,13 +56,14 @@ def gaussian_filter(image: np.ndarray, sigma: float) -> np.ndarray:
 def download_tile(tile_url: str, tile_file: str) -> bool:
     """Download tile from url to file, wait 0.1s and return True (False) if (not) successful"""
 
-    request = Request(tile_url, headers={'User-Agent': 'Mozilla/5.0'})
+    request = Request(tile_url, headers={'User-Agent': 'GPX-Heatmap/1.0'})
 
     try:
         with urlopen(request) as response:
             data = response.read()
 
-    except URLError:
+    except URLError as e:
+        print(e)
         return False
 
     with open(tile_file, 'wb') as file:
