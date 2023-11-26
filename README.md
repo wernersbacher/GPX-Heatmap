@@ -1,4 +1,4 @@
-# strava_local_heatmap.py
+# main.py
 
 Python script to reproduce the Strava Global Heatmap ([www.strava.com/heatmap](https://www.strava.com/heatmap)) with local GPX files
 
@@ -13,12 +13,12 @@ Optimized for cycling activities :bicyclist:
 
 * Download your GPX files to the `gpx` folder (https://support.strava.com/hc/en-us/articles/216918437-Exporting-your-Data-and-Bulk-Export)
 * Install the python dependencies from `requirements.txt`
-* Run `python strava_local_heatmap.py`
+* Run `python main.py`
 
 ### Command-line options
 
 ```
-usage: strava_local_heatmap.py [-h] [--dir DIR] [--filter FILTER] [--year YEAR [YEAR ...]]
+usage: main.py [-h] [--dir DIR] [--filter FILTER] [--year YEAR [YEAR ...]]
                                [--bounds BOUND BOUND BOUND BOUND] [--output OUTPUT] [--zoom ZOOM] [--sigma SIGMA]
                                [--orange] [--csv]
 
@@ -45,9 +45,9 @@ On the use of histogram equalization: [https://medium.com/strava-engineering/the
 
 command|output
 -------|------
-`strava_local_heatmap.py`|![heatmap.png](images/heatmap.png)
-`strava_local_heatmap.py --orange`|![orange.png](images/orange.png)
-`strava_local_heatmap.py --csv`|See https://umap.openstreetmap.fr/en/map/demo-heatmap_261644 (by [@badele](https://github.com/badele))
+`main.py`|![heatmap.png](images/heatmap.png)
+`main.py --orange`|![orange.png](images/orange.png)
+`main.py --csv`|See https://umap.openstreetmap.fr/en/map/demo-heatmap_261644 (by [@badele](https://github.com/badele))
 
 ### Requirements
 
@@ -61,6 +61,6 @@ matplotlib>=3.4
 
 Arch Linux: `sudo pacman -S tk` (see [here](https://github.com/remisalmon/strava-local-heatmap/pull/3#issuecomment-443541311))
 
-## Projects using strava_local_heatmap.py
+## Projects using main.py
 
 [JeSuisUnDesDeux](https://gitlab.com/JeSuisUnDesDeux/jesuisundesdeux/tree/master/datas/traces)
